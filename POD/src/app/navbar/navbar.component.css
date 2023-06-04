@@ -1,0 +1,30 @@
+.main-nav{
+    min-height: 50px;
+    width: 82%;
+    /* margin: 0% auto; */
+    /* border-top: solid 3px rgb(3, 49, 90); */
+    box-shadow: 0px 1px 5px #a9a8a814;
+    position: absolute;
+    /* padding-left: 10%; */
+    /* margin-top: 0%; */
+    z-index: 6;
+    top: 0%;
+    right: 0%;
+    /* background-color: #f8f9f9; */
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 10%;
+    /* align-items: center; */
+}
+
+.navbar {
+  display: flex;
+  color: rgb(3, 49, 90);
+  height: 100%;
+  min-width: 45%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5%;
+  /* position: absolute; */
+  margin-top: 0%;
+}

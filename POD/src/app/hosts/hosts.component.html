@@ -1,0 +1,24 @@
+<div class="host_slide">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let card of cards">
+            <div class="slide">
+                <mat-card class="example-card">
+                    <!-- <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title></mat-card-title>
+                        <mat-card-subtitle></mat-card-subtitle>
+                    </mat-card-header> -->
+                    <img mat-card-image [src]="card.image" alt="image" style="height: 150px; width: 150px;">
+                    <mat-card-content>
+                        <h4 style="color: rgb(3, 49, 90);;">
+                            {{card.name}}
+                        </h4>
+                        <h5 style="color: grey;">
+                            {{card.number_podcasts}} Podcasts
+                        </h5>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

@@ -1,0 +1,29 @@
+<div>
+    <app-left-side-bar></app-left-side-bar>
+    <!-- <div class='home-container-2'> -->
+    <div>
+        <app-navbar></app-navbar>
+        <h2 style="color: rgb(3, 49, 90);">Trending Podcasts</h2>
+        <h4 style="color: grey;">Browse all the Trending Podcasts</h4>
+        <br>
+        <mat-grid-list class="browser-main-grid" cols="3" gutterSize="0px" rowHeight="3:3">
+            <mat-grid-tile *ngFor="let card of cards">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <!-- <mat-card-title>Shiba Inu</mat-card-title>
+                        <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                    </mat-card-header>
+                    <img mat-card-image [src]="card.cover" alt="image">
+                    <mat-card-content>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <app-right-side-bar></app-right-side-bar>
+    </div>
+</div>

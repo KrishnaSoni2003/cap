@@ -1,0 +1,33 @@
+<mat-grid-list cols="2" gutterSize="0px" rowHeight="3:3">
+    <mat-grid-tile>
+        <img src="/assets/PODLogo.png" alt="image" style="height: 10%;position: absolute; left: 0px; top: 0px;">
+        <div>
+            <h2>Welcome back</h2>
+            <p>Welcome back! Please enter your details.</p>
+            <!-- <p>
+                <mat-form-field appearance="outline" style="height: 50px;padding-top: 10px;">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="Placeholder">
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+              </p> -->
+
+            <form action="submit" #loginForm="ngForm" (ngSubmit)="getLoginData(loginForm.value)">
+                Email
+                <br>
+                <input type="text" ngModel placeholder="Enter your email" style="height: 20px; padding-top: 10px; width: 300px;" name="email">
+                <br>
+                <br>
+                Password
+                <br>
+                <input type="text" ngModel placeholder="Enter your email" style="height: 20px; padding-top: 10px; width: 300px;" name="password">
+                <br>
+                <br>
+                <button style="background-color: rgb(22, 212, 149);color: azure;height: 30px; border-color: azure; width: 310px; " [routerLink]="'./main-page'" > Sign in </button>
+            </form>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img src="/assets/POD.png" alt="image" style="height: 100%;">
+    </mat-grid-tile>
+</mat-grid-list>

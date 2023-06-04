@@ -1,0 +1,57 @@
+<div class="right-sidebar">
+  <div class="right-side">
+    <div style="margin-left: 0p;"><mat-icon>notifications-active-border</mat-icon></div>
+    <div class="profile">
+      <img style="height:40px; width:40px; border-radius: 50px;"
+        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+
+      <h4 style="color: rgb(3, 49, 90);">Your Tech Bro </h4>
+    </div>
+  </div>
+  <br>
+  <h3 style="color:rgb(3, 49, 90) ;">Recently Listened</h3>
+  <p style="color: rgb(103, 104, 104);">See your recently listened Podcasts</p>
+
+  <mat-card class="example-card">
+    <img mat-card-image src="https://drive.google.com/uc?export=view&id=1qSnwO018rfmU8Bu-HDREUnikhXXyB59i" alt="image">
+    <mat-card-content>
+      <h4 class="title" style="color:rgb(3, 49, 90); ;">Crypto</h4>
+      <audio [src]="audioUrl" (play)="isPlaying = true" (pause)="isPlaying = false" #audioPlayer></audio>
+      <!-- <div class="details">
+        <div class="track-art"></div>
+        <div class="track-name"></div>
+      </div> -->
+      <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+      </div>
+      <div class="buttons">
+        <div class="repeat_track" onclick="repeatTrack()">
+          <mat-icon>loop</mat-icon>
+        </div>
+        <div class="prev_track" onclick="prevTrack()">
+          <mat-icon>skip_previous</mat-icon>
+        </div>
+        <div class="play_track" (click)="audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause()">
+          <!-- <mat-icon>play_arrow</mat-icon> -->
+          <!-- <mat-icon>pause</mat-icon> -->
+          <!-- <button (click)="audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause()"> -->
+          <mat-icon>{{ audioPlayer.paused ? "play_arrow": "pause" }}</mat-icon>
+
+          <!-- </button> -->
+        </div>
+        <div class="next_track" onclick="nextTrack()">
+          <mat-icon>skip_next</mat-icon>
+        </div>
+        <div class="random_track" onclick="randomTrack()">
+          <mat-icon>shuffle</mat-icon>
+        </div>
+      </div>
+    </mat-card-content>
+    <!-- <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions> -->
+  </mat-card>
+</div>
